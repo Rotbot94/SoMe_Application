@@ -1,0 +1,13 @@
+services:
+  api:
+    build:
+      dockerfile: Dockerfile
+      context: .
+      target: development
+    volumes:
+      - .:/usr/src/app
+    env_file:
+      - .env
+    command: yarn run start
+    ports:
+      - 4000:4000
