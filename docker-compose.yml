@@ -8,6 +8,6 @@ services:
       - .:/usr/src/app
     env_file:
       - .env
-    command: yarn run start
+    command: yarn run start:dev
     ports:
       - 4000:4000

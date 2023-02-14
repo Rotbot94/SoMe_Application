@@ -1,0 +1,5 @@
+Dag 2 logbog: (14/02)
+Der er blevet dannet flowchart, database diagram og et simpelt mockup.
+Der er blevet oprettet et repository på github og scaffolding til en Nest.js applikation er blevet comitted.
+Der er påbegyndt docker opsætning til Nest miljøet, der er dog pt nogle ting der fejler
+- hot reloading virker ikke/docker instancen dør ved ædnringer i service/controller
