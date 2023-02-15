@@ -11,3 +11,18 @@ services:
     command: yarn run start:dev
     ports:
       - 4000:4000
+  db:
+    image: mariadb
+    restart: 'no'
+    container_name: mariadb
+    command: mysqld --character-set-server=utf8mb4 --collation-server=utf8mb4_general_ci
+    volumes:
+      - ./data/db:/var/lib/mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=Test1234
+      - MYSQL_DATABASE=database
+      - MYSQL_USER=admin
+      - MYSQL_PASSWORD=Test1234
+    ports:
+      - "3306:3306"
+
