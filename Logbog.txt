@@ -2,4 +2,18 @@ Dag 2 logbog: (14/02)
 Der er blevet dannet flowchart, database diagram og et simpelt mockup.
 Der er blevet oprettet et repository på github og scaffolding til en Nest.js applikation er blevet comitted.
 Der er påbegyndt docker opsætning til Nest miljøet, der er dog pt nogle ting der fejler
-- hot reloading virker ikke/docker instancen dør ved ædnringer i service/controller
+- hot reloading virker ikke/docker instancen dør ved ændringer i service/controller (dette var kun et ved projektets init, det blev løst af klone projektet ned fra github)
+
+
+Dag 3 logbog: (15/02)
+Der er blevet lavet problemformulering og gantt diagram.
+Der er blevet tilføjet en database i docker opsætningen.
+TypeORM er blevet tilføjet til projektet og er blevet opsat med oplysningerne til DB
+Har tilføjet mappe struktur for api, hvor entitet er hovedmappen, i mappen ligger der controller, dto, entitiets klasse, en service og et module
+TODO: udfyld user entitet
+TODO: udfyld usercontroller
+TODO: Krypter passwords i databasen,
+TODO: Kræv API-nøgle for brug af API
+TODO: Implementer auth-token strategi for brugerlogin (token-varighed?)
+
+
