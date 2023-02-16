@@ -10,7 +10,7 @@ export class UserService {
   private readonly repository: Repository<User>;
 
   public getUser(id): Promise<User> {
-    return this.repository.findOneBy({ id: parseInt(id) });
+    return this.repository.findOneBy({ id: id });
   }
 
   public createUser(body: CreateUserDto): Promise<User> {
