@@ -10,10 +10,14 @@ Der er blevet lavet problemformulering og gantt diagram.
 Der er blevet tilføjet en database i docker opsætningen.
 TypeORM er blevet tilføjet til projektet og er blevet opsat med oplysningerne til DB
 Har tilføjet mappe struktur for api, hvor entitet er hovedmappen, i mappen ligger der controller, dto, entitiets klasse, en service og et module
-TODO: udfyld user entitet
-TODO: udfyld usercontroller
+
+
+Dag 4 logbog: (16/02)
+Udfyldt user entity.
+Oprettet controller endspoint på user.
+Oprettet DTO for createUser.
+Opsat validering på bruger oprettelse request.
+Påbegyndt implementering af auth-token strategi for brugerlogin.
+TODO: Implementer auth-token strategi for brugerlogin (token-varighed?)
 TODO: Krypter passwords i databasen,
 TODO: Kræv API-nøgle for brug af API
-TODO: Implementer auth-token strategi for brugerlogin (token-varighed?)
-
-
