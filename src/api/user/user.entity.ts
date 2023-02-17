@@ -18,8 +18,7 @@ export class User {
   @Column({ type: 'varchar', length: 120 })
   public last_name: string;
 
-  @Exclude({})
-  @Column({ type: 'varchar', length: 120, nullable: false, select: false })
+  @Column({ type: 'varchar', length: 120, nullable: false})
   password: string;
 
   @Column({ type: 'varchar', length: 120 })

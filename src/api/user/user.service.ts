@@ -13,6 +13,10 @@ export class UserService {
     return this.repository.findOneBy({ id: id });
   }
 
+  public getUserByEmail(email): Promise<User> {
+    return this.repository.findOneBy({ email: email });
+  }
+
   public createUser(body: CreateUserDto): Promise<User> {
     const user: User = new User();
     user.first_name = body.first_name;
