@@ -18,6 +18,8 @@ Oprettet controller endspoint på user.
 Oprettet DTO for createUser.
 Opsat validering på bruger oprettelse request.
 Påbegyndt implementering af auth-token strategi for brugerlogin.
-TODO: Implementer auth-token strategi for brugerlogin (token-varighed?)
-TODO: Krypter passwords i databasen,
-TODO: Kræv API-nøgle for brug af API
+
+Dag 5 logbog: (17/02)
+Det er påkrævet at have en auth token at for at registrere en bruger (Den skal frontenden bruge).
+Implementeret JWT token for bruger adgang (token-varighed = 24 timer)
+Krypteret passwords i databasen.
