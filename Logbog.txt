@@ -23,3 +23,9 @@ Dag 5 logbog: (17/02)
 Det er påkrævet at have en auth token at for at registrere en bruger (Den skal frontenden bruge).
 Implementeret JWT token for bruger adgang (token-varighed = 24 timer)
 Krypteret passwords i databasen.
+
+Dag 6 logbog (20/02)
+Refactored user endpoint to get user based on token
+refactored getUser/getLoggedInUser to return GetUserDTO limiting the columns returned to be non vulnerable data
+added customer validator
+added proper JWT secret
