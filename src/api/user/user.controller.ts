@@ -1,30 +1,15 @@
-import {
-  Body,
-  Controller,
-  Get,
-  Inject,
-  Param,
-  ParseIntPipe,
-  Post, UseGuards
-} from "@nestjs/common";
-import { CreateUserDto } from './user.dto';
-import { User } from './user.entity';
+import { Controller, Get, Inject, Request, UseGuards } from '@nestjs/common';
 import { UserService } from './user.service';
-import { JwtAuthGuard } from "../auth/guard/jwt-auth.guard";
+import { JwtAuthGuard } from '../auth/guard/jwt-auth.guard';
+import { GetUserDTO } from './getUser.dto';
 
 @Controller('user')
 export class UserController {
   @Inject(UserService)
   private readonly service: UserService;
-
   @UseGuards(JwtAuthGuard)
-  @Get(':id')
-  public getUser(@Param('id', ParseIntPipe) id: number): Promise<User> {
-    return this.service.getUser(id);
-  }
-
-  @Post()
-  public createUser(@Body() body: CreateUserDto): Promise<User> {
-    return this.service.createUser(body);
+  @Get()
+  public getLoggedInUser(@Request() req: Request): Promise<GetUserDTO> {
+    return this.service.getLoggedInUser(req);
   }
 }

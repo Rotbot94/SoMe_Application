@@ -4,10 +4,11 @@ import {
   Column,
   CreateDateColumn,
   UpdateDateColumn,
+  Unique,
 } from 'typeorm';
-import { Exclude } from 'class-transformer';
 
 @Entity()
+@Unique(['email'])
 export class User {
   @PrimaryGeneratedColumn()
   public id!: number;
@@ -18,10 +19,10 @@ export class User {
   @Column({ type: 'varchar', length: 120 })
   public last_name: string;
 
-  @Column({ type: 'varchar', length: 120, nullable: false})
+  @Column({ type: 'varchar', length: 120, nullable: false })
   password: string;
 
-  @Column({ type: 'varchar', length: 120 })
+  @Column({ type: 'varchar', length: 120, unique: true })
   public email: string;
 
   @Column({ type: 'boolean', default: true })

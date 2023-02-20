@@ -3,8 +3,9 @@ import {
   IsNotEmpty,
   IsString,
   IsStrongPassword,
-  Matches,
+  Validate,
 } from 'class-validator';
+import { CustomEmailValidation } from '../../customValidators/email-validation';
 
 export class CreateUserDto {
   @IsString()
@@ -28,5 +29,7 @@ export class CreateUserDto {
 
   @IsNotEmpty()
   @IsEmail()
+  @Validate(CustomEmailValidation)
   public email: string;
 }
+export class UpdateUserDTO {}
