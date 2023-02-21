@@ -8,22 +8,14 @@ import { AuthModule } from './api/auth/auth.module';
 import { APP_INTERCEPTOR } from '@nestjs/core';
 import { AuthInterceptor } from './api/interceptor/auth.interceptor';
 import { UserModule } from './api/user/user.module';
+import { dataSourceOptions } from './config/typeorm/data-source';
+
 @Module({
   imports: [
     ConfigModule.forRoot({
-      envFilePath: ['.env'],
       isGlobal: true,
     }),
-    TypeOrmModule.forRoot({
-      type: 'mariadb',
-      host: process.env.DB_HOST,
-      port: parseInt(process.env.DB_PORT),
-      username: process.env.DB_USERNAME,
-      password: process.env.DB_PASSWORD,
-      database: process.env.DB_DATABASE,
-      entities: ['dist/**/*.entity.{ts,js}'],
-      synchronize: true,
-    }),
+    TypeOrmModule.forRoot(dataSourceOptions),
     ApiModule,
     AuthModule,
     UserModule,
