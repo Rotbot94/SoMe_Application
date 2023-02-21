@@ -24,6 +24,9 @@
     "migration:revert": "npm run typeorm -- migration:revert",
     "deploy": "npm install && npm run build && npm run start:dev"
   },
+  "engines": {
+    "node": "16.19.0"
+  },
   "dependencies": {
     "@nestjs/common": "^9.0.0",
     "@nestjs/config": "^2.3.1",
