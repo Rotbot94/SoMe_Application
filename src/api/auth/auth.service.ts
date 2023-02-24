@@ -5,6 +5,8 @@ import { JwtService } from '@nestjs/jwt';
 
 @Injectable()
 export class AuthService {
+  private apiKeys: string[] = [process.env.JWT_SECRET];
+
   constructor(
     private userService: UserService,
     private jwtService: JwtService,
@@ -47,5 +49,10 @@ export class AuthService {
 
   decodeToken(token): any {
     return this.jwtService.decode(token);
+  }
+
+  validateApiKey(apiKey: string) {
+    const apiKeys: string[] = [process.env.JWT_SECRET];
+    return apiKeys.indexOf(apiKey);
   }
 }
