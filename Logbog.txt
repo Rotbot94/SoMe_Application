@@ -29,3 +29,15 @@ Refactored user endpoint to get user based on token
 refactored getUser/getLoggedInUser to return GetUserDTO limiting the columns returned to be non vulnerable data
 added customer validator
 added proper JWT secret
+
+Dag 7 - 10 logbog (21/02 - 24/02)
+Backend:
+Changed hosting & ci/cd to aws
+added node engine version
+Added cors library
+Added API guard on login/registration routes/ added missing await on bcrypt.compare
+Added api authorization... currently same as jwt_secret to speed dev process
+Frontend:
+added component library, added layout and navigation
+Added login and registration page, added working registration form with validation, added env file and api token + server, added head to layout, added utility service to retrieve formdata, deleted nav item component for now, removed some global styling, other minor changes
+added interface with user, added login-service.ts and user-service.ts to handle login state and handling loggedinuser
