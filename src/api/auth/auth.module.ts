@@ -14,7 +14,7 @@ import { ApiKeyStrategy } from './strategy/apikey.strategy';
     PassportModule,
     JwtModule.register({
       secret: process.env.JWT_SECRET,
-      signOptions: { expiresIn: '24h' },
+      signOptions: { expiresIn: '15m' },
     }),
   ],
   providers: [AuthService, LocalStrategy, JwtStrategy, ApiKeyStrategy],
